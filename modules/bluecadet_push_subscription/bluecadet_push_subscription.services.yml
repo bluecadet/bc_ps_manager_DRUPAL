@@ -1,0 +1,3 @@
+services:
+  push_subscription:
+    class: Drupal\bc_ps_manager\SubscriptionService

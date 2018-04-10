@@ -1,0 +1,31 @@
+bc_ps_manager.app_subscriber:
+  path: '/subscribe/app'
+  defaults:
+    _controller: 'Drupal\bc_ps_manager\Controller\PushSubscriber::subscribe'
+    _title: 'App Subscriber'
+  requirements:
+    _permission: 'access content'
+
+# Admin Pages
+bc_ps_manager.admin_config_bc_ps_manager:
+  path: '/admin/config/web-push'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Web Push'
+  requirements:
+    _permission: 'access administration pages'
+
+bc_ps_manager.subs_display:
+  path: '/admin/config/web-push/display'
+  defaults:
+    _controller: 'Drupal\bc_ps_manager\Controller\PushSubscriber::display'
+    _title: 'App Subscriber Display'
+  requirements:
+    _permission: 'access content'
+
+bc_ps_manager.test_push:
+  path: '/admin/config/web-push/test-push'
+  defaults:
+    _form: 'Drupal\bc_ps_manager\Form\Push'
+  requirements:
+    _permission: 'access administration pages'

@@ -1,0 +1,14 @@
+
+# Push subscription menu items definition
+entity.push_subscription.collection:
+  title: 'Push subscription list'
+  route_name: entity.push_subscription.collection
+  description: 'List Push subscription entities'
+  parent: system.admin_structure
+  weight: 100
+
+push_subscription.admin.structure.settings:
+  title: 'Push subscription settings'
+  description: 'Configure Push subscription entities'
+  route_name: push_subscription.settings
+  parent: system.admin_structure

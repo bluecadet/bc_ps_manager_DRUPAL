@@ -1,0 +1,30 @@
+add push subscription entities:
+  title: 'Create new Push subscription entities'
+
+administer push subscription entities:
+  title: 'Administer Push subscription entities'
+  description: 'Allow to access the administration form to configure Push subscription entities.'
+  restrict access: true
+
+delete push subscription entities:
+  title: 'Delete Push subscription entities'
+
+edit push subscription entities:
+  title: 'Edit Push subscription entities'
+
+view published push subscription entities:
+  title: 'View published Push subscription entities'
+
+view unpublished push subscription entities:
+  title: 'View unpublished Push subscription entities'
+
+view all push subscription revisions:
+  title: 'View all Push subscription revisions'
+
+revert all push subscription revisions:
+  title: 'Revert all Push subscription revisions'
+  description: 'Role requires permission <em>view Push subscription revisions</em> and <em>edit rights</em> for push subscription entities in question or <em>administer push subscription entities</em>.'
+
+delete all push subscription revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Push subscription revisions</em> and <em>delete rights</em> for push subscription entities in question or <em>administer push subscription entities</em>.'

@@ -1,0 +1,19 @@
+bc_ps_manager.admin_config_bc_ps_manager:
+  title: 'Web Push'
+  route_name: bc_ps_manager.admin_config_bc_ps_manager
+  parent: system.admin_config
+  description: 'Configure Web Push settings.'
+
+bc_ps_manager.subs_display:
+  title: Web Push Subscriptions
+  route_name: bc_ps_manager.subs_display
+  parent: bc_ps_manager.admin_config_bc_ps_manager
+  description: Dispay all Subscriptions
+  weight: -100
+
+bc_ps_manager.test_push:
+  title: TEST push message
+  route_name: bc_ps_manager.test_push
+  parent: bc_ps_manager.admin_config_bc_ps_manager
+  description: Test pushing a message to all valid subscriptions
+  weight: 0
