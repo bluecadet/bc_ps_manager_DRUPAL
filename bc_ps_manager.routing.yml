@@ -13,7 +13,14 @@ bc_ps_manager.admin_config_bc_ps_manager:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
     _title: 'Web Push'
   requirements:
-    _permission: 'access administration pages'
+    _permission: 'access bc_ps_manager settings'
+
+bc_ps_manager.keys:
+  path: '/admin/config/web-push/keys'
+  defaults:
+    _form: 'Drupal\bc_ps_manager\Form\WebPushKeys'
+  requirements:
+    _permission: 'access bc_ps_manager settings'
 
 bc_ps_manager.subs_display:
   path: '/admin/config/web-push/display'
@@ -28,4 +35,4 @@ bc_ps_manager.test_push:
   defaults:
     _form: 'Drupal\bc_ps_manager\Form\Push'
   requirements:
-    _permission: 'access administration pages'
+    _permission: 'access bc_ps_manager settings'

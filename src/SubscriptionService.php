@@ -51,14 +51,20 @@ class SubscriptionService {
   }
 
   function pushToSubscriptions($data, Array $subscriptions) {
+    $settings = \Drupal::state()->get('bc_ps_manager.push_api_keys', [
+      'email' => '',
+      'public_key' => '',
+      'private_key' => ''
+    ]);
 
     $auth = array(
       'VAPID' => array(
-        'subject' => 'mailto:pinge@bluecadet.com',
-        'publicKey' => 'BAXf5bSt0pYMHngeyhGiOE4JvZrErUBoY8u19zZnqkqvEnBUGQtvxqnOvlpByrYWzOgFlcsDoy9_ei8oWXsxUTY',
-        'privateKey' => '7nxSosMANNLlnaxD3NPqA76dWC7xwJSBKnQgKFYkNP0',
+        'subject' => 'mailto:' . $settings['email'],
+        'publicKey' => $settings['public_key'],
+        'privateKey' => $settings['private_key'],
       ),
     );
+
     $defaultOptions = [
       'TTL' => 600, // defaults to 4 weeks
       // 'urgency' => 'normal', // protocol defaults to "normal"
