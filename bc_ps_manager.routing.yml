@@ -33,6 +33,14 @@ bc_ps_manager.subs_display:
 bc_ps_manager.test_push:
   path: '/admin/config/web-push/test-push'
   defaults:
-    _form: 'Drupal\bc_ps_manager\Form\Push'
+    _form: 'Drupal\bc_ps_manager\Form\PushMessage'
+  requirements:
+    _permission: 'access bc_ps_manager settings'
+
+
+bc_ps_manager.test_push_notification:
+  path: '/admin/config/web-push/test-push-notification'
+  defaults:
+    _form: 'Drupal\bc_ps_manager\Form\PushNotification'
   requirements:
     _permission: 'access bc_ps_manager settings'

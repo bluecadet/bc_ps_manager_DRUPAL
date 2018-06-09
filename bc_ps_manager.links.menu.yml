@@ -25,3 +25,10 @@ bc_ps_manager.test_push:
   parent: bc_ps_manager.admin_config_bc_ps_manager
   description: Test pushing a message to all valid subscriptions
   weight: 0
+
+bc_ps_manager.test_push_notification:
+  title: TEST push notification
+  route_name: bc_ps_manager.test_push_notification
+  parent: bc_ps_manager.admin_config_bc_ps_manager
+  description: Test pushing a message to all valid subscriptions
+  weight: 1

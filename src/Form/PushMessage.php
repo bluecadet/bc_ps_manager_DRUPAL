@@ -10,7 +10,7 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\bluecadet_push_subscription\Entity\PushSubscription;
 use Drupal\bc_ps_manager\SubscriptionService;
 
-class Push extends FormBase implements ContainerInjectionInterface {
+class PushMessage extends FormBase implements ContainerInjectionInterface {
 
   protected $subService;
 
