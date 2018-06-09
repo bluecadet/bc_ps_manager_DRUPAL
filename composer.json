@@ -1,0 +1,19 @@
+{
+  "name": "bluecadet/bc_ps_manager",
+  "description": "Adds the ability to use the Web Push API.",
+  "type": "custom-drupal-module",
+  "authors": [
+    {
+      "name": "Pete Inge",
+      "role": "Maintainer"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.0",
+    "composer/installers": "^1.0@dev",
+    "oomphinc/composer-installers-extender": "~1.0",
+    "minishlink/web-push": "^2.0",
+  }
+}
