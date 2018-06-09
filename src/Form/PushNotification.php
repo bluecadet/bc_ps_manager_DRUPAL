@@ -92,8 +92,8 @@ class PushNotification extends FormBase implements ContainerInjectionInterface {
       'icon' => $values['icon'],
     ];
 
-    // $subscriptions = $this->subService->retrieveAllActiveSubscriptions();
-    // $responses = $this->subService->pushToSubscriptions($data, $subscriptions);
+    $subscriptions = $this->subService->retrieveAllActiveSubscriptions();
+    $responses = $this->subService->pushToSubscriptions($data, $subscriptions);
 
   }
 }
