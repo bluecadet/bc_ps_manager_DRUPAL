@@ -52,15 +52,16 @@ class PushNotification extends FormBase implements ContainerInjectionInterface {
       '#type' => 'select',
       '#title' => 'Direction',
       '#options' => [
-        'auto',
-        'ltr',
-        'rtl'
+        'auto' => 'auto',
+        'ltr' => 'ltr',
+        'rtl' => 'rtl'
       ]
     ];
 
     $form ['lang'] = [
       '#type' => 'textfield',
-      '#title' => 'Title'
+      '#title' => 'Language',
+      '#default_value' => 'en-US'
     ];
 
     $form['body'] = [
