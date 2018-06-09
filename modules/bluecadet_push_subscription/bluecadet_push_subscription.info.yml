@@ -2,5 +2,5 @@ type: module
 name: BC Push Subscription Entity
 description: 'Push Subscription Entity'
 package: Bluecadet
-version: '8.x-1.0.1'
+version: '8.x-1.0.2'
 core: 8.x

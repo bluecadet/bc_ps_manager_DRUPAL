@@ -2,7 +2,7 @@ type: module
 name: Bluecadet Push API Manager
 description: 'Manage Push Subscriptions'
 package: Bluecadet
-version: '8.x-1.0.1'
+version: '8.x-1.0.2'
 core: 8.x
 
 dependencies:
