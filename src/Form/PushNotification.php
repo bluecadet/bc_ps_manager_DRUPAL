@@ -74,6 +74,16 @@ class PushNotification extends FormBase implements ContainerInjectionInterface {
       '#title' => 'Icon'
     ];
 
+    $form ['renotify'] = [
+      '#type' => 'select',
+      '#title' => 'Renotify',
+      '#options' => [
+        '' => '--Select--',
+        'true' => 'true',
+        'false' => 'false'
+      ]
+    ];
+
     $form['submit'] = array(
       '#type' => 'submit',
       '#value' => $this->t('Send Notification'),
@@ -91,6 +101,7 @@ class PushNotification extends FormBase implements ContainerInjectionInterface {
       'lang' => $values['lang'],
       'body' => $values['body'],
       'icon' => $values['icon'],
+      'renotify' => $values['renotify'],
     ];
 
     $subscriptions = $this->subService->retrieveAllActiveSubscriptions();
