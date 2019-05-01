@@ -4,6 +4,7 @@ namespace Drupal\bc_ps_manager;
 
 use Drupal\bluecadet_push_subscription\Entity\PushSubscription;
 use Minishlink\WebPush\WebPush;
+use Minishlink\WebPush\Subscription;
 
 /**
  *
@@ -74,14 +75,23 @@ class SubscriptionService {
 
     $webPush = new WebPush($auth, $defaultOptions);
 
+    $data_to_send = json_encode($data);
+
     foreach ($subscriptions as $sub) {
       $keys = $sub->getSubKeys();
 
+
+      $a_sub = Subscription::create([
+        "endpoint" => $sub->getEndpoint(),
+        "keys" => [
+          'p256dh' => $keys->p256dh,
+          'auth' => $keys->auth,
+        ],
+      ]);
+
       $webPush->sendNotification(
-        $sub->getEndpoint(),
-        json_encode($data),
-        $keys->p256dh,
-        $keys->auth
+        $a_sub,
+        $data_to_send
       );
     }
 
